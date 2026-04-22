@@ -58,8 +58,15 @@ public class GunBehaviour : MonoBehaviour
 
         gunAudioSource.clip = pistolGunShootSfx;
         gunAudioSource.Play();
-        
+
+        FirePistolRay();
+
         Debug.Log("FIring pistol gun");
+    }
+
+    private void FirePistolRay()
+    {
+
     }
 
     private bool weaponGrabbed = false;
