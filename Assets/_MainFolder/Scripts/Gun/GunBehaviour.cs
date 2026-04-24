@@ -17,6 +17,7 @@ public class GunBehaviour : MonoBehaviour
 
     [Header("VFX")]
     [SerializeField] private ParticleSystem pistolGunMuzzleFlashFX;
+    [SerializeField] private GameObject bulletHolePrefab;
 
     private ChangeWeaponType changeWeapType;
     private void Awake()
@@ -64,9 +65,29 @@ public class GunBehaviour : MonoBehaviour
         Debug.Log("FIring pistol gun");
     }
 
+
     private void FirePistolRay()
     {
+        RaycastHit hit;
 
+        if (Physics.Raycast(launchPoint.transform.position, launchPoint.transform.forward, out hit,Mathf.Infinity))
+        {
+            Debug.Log("Hit: " + hit.collider.name);
+            CreateBulletHole(hit);
+        }
+    }
+
+
+    private float decalOffset = 0.01f;
+    private void CreateBulletHole(RaycastHit objectHit)
+    {
+        GameObject bulletHole = Instantiate(
+            bulletHolePrefab,
+            objectHit.point + (objectHit.normal * decalOffset),
+            Quaternion.LookRotation(objectHit.normal)
+            );
+
+        bulletHole.transform.SetParent(objectHit.transform);
     }
 
     private bool weaponGrabbed = false;
