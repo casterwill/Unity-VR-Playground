@@ -10,3 +10,5 @@ current feature :
 - interactable and functional toy gun (grab, shoot, projectile, sfx)
 - interactable and functional real gun (shoot, bullet hole, muzzle flash)
 - quick swap between pistol gun type
+
+Devlog Video on [youtube]{https://www.youtube.com/@pudpap/videos}
