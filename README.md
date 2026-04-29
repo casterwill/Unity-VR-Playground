@@ -11,4 +11,4 @@ current feature :
 - interactable and functional real gun (shoot, bullet hole, muzzle flash)
 - quick swap between pistol gun type
 
-Devlog Video on [youtube]{https://www.youtube.com/@pudpap/videos}
+Devlog Video on [youtube](https://www.youtube.com/@pudpap/videos)
