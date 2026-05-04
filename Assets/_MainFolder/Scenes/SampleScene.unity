@@ -47030,7 +47030,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8518886412901184336, guid: 5cf8df5c7f0bee04ea37daafdcf8ea12, type: 3}
       propertyPath: m_Name
-      value: MorphGun
+      value: MultiGun
       objectReference: {fileID: 0}
     - target: {fileID: 8986616930977167451, guid: 5cf8df5c7f0bee04ea37daafdcf8ea12, type: 3}
       propertyPath: m_LocalPosition.x
@@ -47075,7 +47075,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7656560150126829922, guid: 5cf8df5c7f0bee04ea37daafdcf8ea12, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5cf8df5c7f0bee04ea37daafdcf8ea12, type: 3}
 --- !u!1 &8929069714801148205
 GameObject:

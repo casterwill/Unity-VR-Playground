@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.Timeline;
 
@@ -19,10 +20,21 @@ public class GunBehaviour : MonoBehaviour
     [SerializeField] private ParticleSystem pistolGunMuzzleFlashFX;
     [SerializeField] private GameObject bulletHolePrefab;
 
+    [Header("Pistol Gun")]
+    [SerializeField] private int maxAmmo = 7;
+    [SerializeField] TextMeshPro ammoTxt;
+
+    private int currentAmmo;
+
     private ChangeWeaponType changeWeapType;
     private void Awake()
     {
         changeWeapType = GetComponent<ChangeWeaponType>();
+    }
+
+    private void Start()
+    {
+        EnableAmmoTxt(false);
     }
 
     private ChangeWeaponType.GunType currentType;
@@ -37,7 +49,7 @@ public class GunBehaviour : MonoBehaviour
                 ActivateToyGunTrigger();
                 break;
             case ChangeWeaponType.GunType.PistolGun:
-                ActivatePistolGunTrigger();
+                CheckCurrentAmmo();
                 break;
         }
     }
@@ -53,6 +65,44 @@ public class GunBehaviour : MonoBehaviour
         gunAudioSource.Play();
     }
 
+    private void CheckCurrentAmmo()
+    {
+        if (currentAmmo <= 0)
+        {
+            Debug.Log("No Ammo Left");
+            return;
+        }
+        else ActivatePistolGunTrigger();
+    }
+
+    public void UpdateAmmoTxt() 
+    {
+        ammoTxt.text = $"{currentAmmo} / {maxAmmo}";
+    }
+
+
+
+    public void SetupInitialBullet()
+    {
+        currentAmmo = maxAmmo;
+    }
+
+    public void EnableAmmoTxt(bool state)
+    {
+        Color c = ammoTxt.color;
+
+        if (state)
+        {
+            c.a = 1;
+        }
+        else
+        {
+            c.a = 0;
+        }
+
+        ammoTxt.color = c;
+    }
+
     private void ActivatePistolGunTrigger()
     {
         pistolGunMuzzleFlashFX.Play();
@@ -61,10 +111,16 @@ public class GunBehaviour : MonoBehaviour
         gunAudioSource.Play();
 
         FirePistolRay();
+        ReducecurrentAmmo();
+        UpdateAmmoTxt();
 
-        Debug.Log("FIring pistol gun");
+        Debug.Log("Firing pistol gun");
     }
 
+    private void ReducecurrentAmmo()
+    {
+        currentAmmo--;
+    }
 
     private void FirePistolRay()
     {

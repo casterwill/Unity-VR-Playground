@@ -79,6 +79,10 @@ public class ChangeWeaponType : MonoBehaviour
 
     private void ChangeToPistolGun()
     {
+        gunBehav.SetupInitialBullet();
+        gunBehav.EnableAmmoTxt(true);
+        gunBehav.UpdateAmmoTxt();
+
         gripMeshRenderer.GetComponent<MeshRenderer>().material.color = pistolColor;
         muzzleMeshRenderer.GetComponent<MeshRenderer>().material.color = pistolColor;
 
@@ -89,6 +93,8 @@ public class ChangeWeaponType : MonoBehaviour
     
     private void ChangeToToyGun()
     {
+        gunBehav.EnableAmmoTxt(false);
+
         gripMeshRenderer.GetComponent<MeshRenderer>().material.color = toyGunColor;
         muzzleMeshRenderer.GetComponent<MeshRenderer>().material.color = toyGunColor;
 
