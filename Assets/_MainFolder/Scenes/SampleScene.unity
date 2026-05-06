@@ -16616,6 +16616,63 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1001 &264771662593794246
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6375271559697789037, guid: 2edf93f7c6d981a4189503766209fe1e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.397
+      objectReference: {fileID: 0}
+    - target: {fileID: 6375271559697789037, guid: 2edf93f7c6d981a4189503766209fe1e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.01455
+      objectReference: {fileID: 0}
+    - target: {fileID: 6375271559697789037, guid: 2edf93f7c6d981a4189503766209fe1e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.172
+      objectReference: {fileID: 0}
+    - target: {fileID: 6375271559697789037, guid: 2edf93f7c6d981a4189503766209fe1e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6375271559697789037, guid: 2edf93f7c6d981a4189503766209fe1e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6375271559697789037, guid: 2edf93f7c6d981a4189503766209fe1e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6375271559697789037, guid: 2edf93f7c6d981a4189503766209fe1e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6375271559697789037, guid: 2edf93f7c6d981a4189503766209fe1e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6375271559697789037, guid: 2edf93f7c6d981a4189503766209fe1e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6375271559697789037, guid: 2edf93f7c6d981a4189503766209fe1e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8286607965196166110, guid: 2edf93f7c6d981a4189503766209fe1e, type: 3}
+      propertyPath: m_Name
+      value: PistolMagazine
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2edf93f7c6d981a4189503766209fe1e, type: 3}
 --- !u!4 &268372244776929517
 Transform:
   m_ObjectHideFlags: 0
@@ -47749,4 +47806,5 @@ SceneRoots:
   - {fileID: 1825945902}
   - {fileID: 952573460}
   - {fileID: 581630853}
+  - {fileID: 264771662593794246}
   - {fileID: 1961114853}
