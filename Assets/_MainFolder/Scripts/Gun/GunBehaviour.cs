@@ -1,6 +1,9 @@
+using System.Net.Sockets;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Timeline;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
+using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
 
 [RequireComponent(typeof(ChangeWeaponType))]
@@ -23,6 +26,7 @@ public class GunBehaviour : MonoBehaviour
     [Header("Pistol Gun")]
     [SerializeField] private int maxAmmo = 7;
     [SerializeField] TextMeshPro ammoTxt;
+    [SerializeField] XRSocketInteractor magazineSocket;
 
     private int currentAmmo;
 
@@ -79,8 +83,6 @@ public class GunBehaviour : MonoBehaviour
     {
         ammoTxt.text = $"{currentAmmo} / {maxAmmo}";
     }
-
-
 
     public void SetupInitialBullet()
     {
@@ -162,5 +164,14 @@ public class GunBehaviour : MonoBehaviour
     public bool IsWeaponGrabbed()
     {
         return weaponGrabbed;
+    }
+
+    public void OnInsertMagazineSocket()
+    {
+        IXRSelectInteractable insertedObject = magazineSocket.GetOldestInteractableSelected();
+
+        Debug.Log(insertedObject.transform.gameObject.name + " entering socket");
+        SetupInitialBullet();
+        UpdateAmmoTxt();
     }
 }

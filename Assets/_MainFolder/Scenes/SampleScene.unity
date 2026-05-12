@@ -47089,6 +47089,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: MultiGun
       objectReference: {fileID: 0}
+    - target: {fileID: 8666312595425777790, guid: 5cf8df5c7f0bee04ea37daafdcf8ea12, type: 3}
+      propertyPath: m_StartingSelectFilters.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8666312595425777790, guid: 5cf8df5c7f0bee04ea37daafdcf8ea12, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8666312595425777790, guid: 5cf8df5c7f0bee04ea37daafdcf8ea12, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8666312595425777790, guid: 5cf8df5c7f0bee04ea37daafdcf8ea12, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8986616930977167451, guid: 5cf8df5c7f0bee04ea37daafdcf8ea12, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.533
