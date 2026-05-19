@@ -28,7 +28,7 @@ public class GunBehaviour : MonoBehaviour
     [SerializeField] TextMeshPro ammoTxt;
     [SerializeField] XRSocketInteractor magazineSocket;
 
-    private int currentAmmo;
+    private int currentAmmo = 0;
 
     private ChangeWeaponType changeWeapType;
     private void Awake()

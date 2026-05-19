@@ -79,7 +79,6 @@ public class ChangeWeaponType : MonoBehaviour
 
     private void ChangeToPistolGun()
     {
-        gunBehav.SetupInitialBullet();
         gunBehav.EnableAmmoTxt(true);
         gunBehav.UpdateAmmoTxt();
 
