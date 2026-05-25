@@ -1,6 +1,6 @@
 # Unity-VR-Playground
 
-Using Unity 6.4
+Using Unity 6000.4.0f1
 
 This Project doesn't need VR Head Mounted Display to be developed in Unity Engine, thanks to XR Device Simulator
 
